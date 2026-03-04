@@ -1,0 +1,10 @@
+*.pyc
+.DS_Store
+.nextflow*
+data/
+nohup.out
+null/
+results/
+testing*
+testing/
+work/

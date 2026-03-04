@@ -1,0 +1,79 @@
+repository_type: pipeline
+
+nf_core_version: 3.3.2
+
+lint:
+  files_exist:
+    - .github/.dockstore.yml
+    - .github/CONTRIBUTING.md
+    - .github/ISSUE_TEMPLATE/bug_report.yml
+    - .github/ISSUE_TEMPLATE/config.yml
+    - .github/ISSUE_TEMPLATE/feature_request.yml
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .github/workflows/awsfulltest.yml
+    - .github/workflows/awstest.yml
+    - CITATIONS.md
+    - CODE_OF_CONDUCT.md
+    - LICENSE
+    - assets/email_template.html
+    - assets/email_template.txt
+    - assets/nf-core-tso500_v2_post_processing_logo_light.png
+    - assets/sendmail_template.txt
+    - conf/igenomes.config
+    - conf/igenomes_ignored.config
+    - docs/images/nf-core-tso500_v2_post_processing_logo_dark.png
+    - docs/images/nf-core-tso500_v2_post_processing_logo_light.png
+  files_unchanged:
+    - .github/.dockstore.yml
+    - .github/CONTRIBUTING.md
+    - .github/ISSUE_TEMPLATE/bug_report.yml
+    - .github/ISSUE_TEMPLATE/config.yml
+    - .github/ISSUE_TEMPLATE/feature_request.yml
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .github/workflows/branch.yml
+    - .github/workflows/linting.yml
+    - .github/workflows/linting_comment.yml
+    - .prettierignore
+    - CODE_OF_CONDUCT.md
+    - LICENSE
+    - assets/email_template.txt
+    - assets/nf-core-tso500_v2_post_processing_logo_light.png
+    - docs/README.md
+    - docs/images/nf-core-tso500_v2_post_processing_logo_dark.png
+    - docs/images/nf-core-tso500_v2_post_processing_logo_light.png
+  multiqc_config:
+    - report_comment
+  nextflow_config:
+    - manifest.homePage
+    - manifest.name
+    - validation.help.afterText
+    - validation.help.beforeText
+    - validation.summary.afterText
+    - validation.summary.beforeText
+  readme:
+    - nextflow_badge
+
+template:
+  org: InPreD
+  name: tso500_v2_post_processing
+  description: nextflow pipeline to handle post processing of TSO500 v2 data processed
+    with Dragen
+  author: "@marrip"
+  version: 1.0.0dev
+  force: true
+  outdir: .
+  skip_features:
+    - adaptivecard
+    - citations
+    - codespaces
+    - email
+    - github
+    - gitpod
+    - gpu
+    - igenomes
+    - license
+    - rocrate
+    - seqera_platform
+    - slackreport
+    - vscode
+  is_nfcore: false
